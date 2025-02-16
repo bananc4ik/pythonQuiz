@@ -1,0 +1,85 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#started_box {
+    text-align: center;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    padding: 20px;
+}
+
+#started_box img {
+    width: 150px;
+    margin-bottom: 20px;
+    
+}
+
+#started_title {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    color: #4682B4; /* SteelBlue, для заголовка, не слишком синий */
+}
+
+#started_button {
+    background-color: #6495ED; /* CornflowerBlue, мягкий синий */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+#started_button:hover {
+    background-color: #4876FF; /* Более яркий синий при наведении */
+}
+
+#question_box {
+    width: 500px; /* Ширина контейнера */
+    margin: 20px auto; /* Отступы сверху/снизу и выравнивание по центру */
+    padding: 20px; /* Внутренние отступы */
+    border: 1px solid #ccc; /* Рамка */
+    border-radius: 5px; /* Закругление углов */
+    background-color: #f9f9f9; /* Цвет фона */
+    visibility: collapse;
+  }
+  
+  #question_title {
+    font-size: 1.2em; /* Размер шрифта заголовка */
+    font-weight: bold; /* Жирный шрифт */
+    margin-bottom: 15px; /* Отступ снизу */
+  }
+  
+  #question_options {
+    display: flex; /* Используем flexbox для удобного расположения элементов */
+    flex-direction: column; /* Располагаем элементы в столбец */
+  }
+  
+  #question_options p {
+    padding: 10px; /* Внутренние отступы */
+    margin-bottom: 10px; /* Отступ снизу */
+    border: 1px solid #ddd; /* Рамка */
+    border-radius: 3px; /* Закругление углов */
+    background-color: #fff; /* Цвет фона */
+    cursor: pointer; /* Курсор в виде руки при наведении */
+  }
+  
+  #question_options p:hover {
+    background-color: #eee; /* Цвет фона при наведении */
+  }
