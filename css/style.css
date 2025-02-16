@@ -83,3 +83,18 @@ body {
   #question_options p:hover {
     background-color: #eee; /* Цвет фона при наведении */
   }
+  
+  #question_but{
+    background-color: #6495ED;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+  }
+
+  #question_but:hover {
+    background-color: #4876FF;
+  }
