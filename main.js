@@ -1,5 +1,4 @@
-let question_option = document.querySelector('input[name ="radio_button"]:checked').value;
-console.log(question_option);
+
 
 let question_label = document.querySelectorAll("label");
 let object = [
@@ -38,6 +37,7 @@ started_button.addEventListener("click", function (event) {
     question_box.style.visibility = "visible";
 });
 question_button.addEventListener("click",function (event) {
+    let question_option = document.querySelector('input[name ="radio_button"]:checked').value;
     console.log(question_option);
     
     
