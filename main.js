@@ -16,7 +16,7 @@ let question_number = 0;
 
 // V FUNCTION
 question_title.textContent = object[question_number].question;
-object[0].options.forEach(element => {
+object[question_number].options.forEach(element => {
     
     let a = question_label[index]
     a.textContent = element;
@@ -40,6 +40,11 @@ started_button.addEventListener("click", function (event) {
 question_button.addEventListener("click",function (event) {
     let question_option = document.querySelector('input[name ="radio_button"]:checked').value;
     console.log(question_option);
+    if(question_option == object[question_number].correct){
+        console.log("Ты большой молодец дай обниму ");
+    }
+        
+        
     
     
 })
