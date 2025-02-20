@@ -9,12 +9,13 @@ let object = [
     }
 ];
 
-let question_number = 0;
 let question_title = document.getElementById("question_title");
-question_title.textContent = object[question_number].question;
 let inputs = document.querySelectorAll("input");
-
 let index = 0;
+let question_number = 0;
+
+// V FUNCTION
+question_title.textContent = object[question_number].question;
 object[0].options.forEach(element => {
     
     let a = question_label[index]
