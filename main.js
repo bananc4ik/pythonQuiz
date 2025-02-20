@@ -5,7 +5,7 @@ let object = [
     {
         question:"Какая функция выводит что-либо в консоль?",
         options:["print()","log()","out()","printer()"],
-        correct:0
+        correct:"printer()"
     }
 ];
 
