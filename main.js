@@ -5,6 +5,11 @@ let object = [
     {
         question:"Какая функция выводит что-либо в консоль?",
         options:["print()","log()","out()","printer()"],
+        correct:"print()"
+    },
+    {
+        question:"Как объявить функцию?",
+        options:["def()","function()","int add()"],
         correct:"printer()"
     }
 ];
@@ -14,18 +19,22 @@ let inputs = document.querySelectorAll("input");
 let index = 0;
 let question_number = 0;
 
-// V FUNCTION
-question_title.textContent = object[question_number].question;
-object[question_number].options.forEach(element => {
+function transition(){
+    question_title.textContent = object[question_number].question;
+    object[question_number].options.forEach(element => {
+        let a = question_label[index]
+        a.textContent = element;
+        inputs[index].value = element;
+        index += 1
+        console.log(a);
     
-    let a = question_label[index]
-    a.textContent = element;
-    inputs[index].value = element;
-    index += 1
-    console.log(a);
     
 });
+}
 
+// V FUNCTION
+
+transition()
 
 
 
@@ -42,9 +51,15 @@ question_button.addEventListener("click",function (event) {
     console.log(question_option);
     if(question_option == object[question_number].correct){
         console.log("Ты большой молодец дай обниму ");
+        let victory_music = document.getElementById("victory_music").play();
+        
+        transition(question_number += 1)
+        
+
+    }else{
+        console.log("Неправильно");
+        transition(question_number += 1)
+        
     }
-        
-        
-    
-    
+           
 })
