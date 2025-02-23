@@ -17,9 +17,10 @@ let object = [
 let question_title = document.getElementById("question_title");
 let inputs = document.querySelectorAll("input");
 let question_number = 0;
-let index = 0;
 
 function transition(question_number){
+    let index = 0;
+
     question_title.textContent = object[question_number].question;
     object[question_number].options.forEach(element => {
         let b = question_label[index];
