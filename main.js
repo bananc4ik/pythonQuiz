@@ -16,25 +16,24 @@ let object = [
 
 let question_title = document.getElementById("question_title");
 let inputs = document.querySelectorAll("input");
-let index = 0;
 let question_number = 0;
+let index = 0;
 
-function transition(){
+function transition(question_number){
     question_title.textContent = object[question_number].question;
     object[question_number].options.forEach(element => {
-        let a = question_label[index]
-        a.textContent = element;
+        let b = question_label[index];
+        b.textContent = element;
         inputs[index].value = element;
-        index += 1
-        console.log(a);
+        inputs[index].checked = false;
+        index += 1;
+        console.log(b);
     
     
-});
-}
+})
+};
 
-// V FUNCTION
-
-transition()
+transition(question_number);
 
 
 
@@ -52,14 +51,15 @@ question_button.addEventListener("click",function (event) {
     if(question_option == object[question_number].correct){
         console.log("Ты большой молодец дай обниму ");
         let victory_music = document.getElementById("victory_music").play();
-        
-        transition(question_number += 1)
+        question_number += 1;
+        transition(question_number);
         
 
     }else{
         console.log("Неправильно");
-        transition(question_number += 1)
+        question_number += 1;
+        transition(question_number);
         
     }
            
-})
+});
