@@ -121,7 +121,7 @@ question_button.addEventListener("click",function (event) {
 final_button.addEventListener("click",function (event) {
     question_box.style.display = "none";
     final_box.style.display = "flex";
-    user.textContent = user_score
+    user.textContent = user_score +1;
 
     
 });
