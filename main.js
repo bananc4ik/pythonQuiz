@@ -75,7 +75,7 @@ function transition(question_number){
 
 transition(question_number);
 
-
+let user = document.getElementById("user_score")
 
 let victory_music = document.getElementById("victory_music");
 
@@ -83,18 +83,21 @@ let question_button = document.getElementById("question_but");
 let started_button = document.getElementById("started_button");
 let final_button = document.getElementById("final_but");
 
+let final_box = document.getElementById("final_box");
 let question_box = document.getElementById("question_box");
+
 started_button.addEventListener("click", function (event) {
-    started_box.style.visibility = "collapse";
-    question_box.style.visibility = "visible";
+    started_box.style.display = "none";
+    question_box.style.display ="block"
 });
 question_button.addEventListener("click",function (event) {
     let question_option = document.querySelector('input[name ="radio_button"]:checked').value;
     console.log(question_option);
 
     if (question_number >= 8) {
-        final_button.style.visibility = "visible"
-        console.log("AAAAAAAAAAAA");
+        question_button.style.display = "none";
+        final_button.style.visibility = "visible";
+        console.log("Тест пройден");
         
         
     } else {
@@ -113,4 +116,12 @@ question_button.addEventListener("click",function (event) {
         question_number += 1;
         transition(question_number); 
     }         
+});
+
+final_button.addEventListener("click",function (event) {
+    question_box.style.display = "none";
+    final_box.style.display = "flex";
+    user.textContent = user_score
+
+    
 });
