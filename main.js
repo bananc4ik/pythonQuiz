@@ -92,7 +92,7 @@ question_button.addEventListener("click",function (event) {
     let question_option = document.querySelector('input[name ="radio_button"]:checked').value;
     console.log(question_option);
 
-    if (question_number >= object.length) {
+    if (question_number >= 8) {
         final_button.style.visibility = "visible"
         console.log("AAAAAAAAAAAA");
         
