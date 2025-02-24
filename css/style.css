@@ -36,7 +36,7 @@ body {
 }
 
 #started_button {
-    background-color: #6495ED; /* CornflowerBlue, мягкий синий */
+    background-color: #6495ED; 
     color: white;
     border: none;
     padding: 12px 25px;
@@ -97,4 +97,28 @@ body {
 
   #question_but:hover {
     background-color: #4876FF;
+  }
+
+  #final_box{
+    visibility: collapse;
+  }
+  #final_but{
+    visibility: collapse;
+    background-color: #6495ED; 
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+  }
+
+  #started_button:hover {
+    background-color: #4876FF; /* Более яркий синий при наведении */
+}
+
+  #profile_image{
+    width: 150px;
+    height: 150px;
   }
