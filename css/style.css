@@ -72,14 +72,15 @@ body {
     flex-direction: column; /* Располагаем элементы в столбец */
   }
   
-  #question_options p {
+  #profile_number{
     padding: 10px; /* Внутренние отступы */
     margin-bottom: 10px; /* Отступ снизу */
-    border: 1px solid #ddd; /* Рамка */
+ 
     border-radius: 3px; /* Закругление углов */
     background-color: #fff; /* Цвет фона */
     cursor: pointer; /* Курсор в виде руки при наведении */
   }
+
   
   #question_options p:hover {
     background-color: #eee; /* Цвет фона при наведении */
@@ -113,12 +114,17 @@ body {
     margin-top: 10px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 25px;
-    font-weight: 550;
+    font-weight: 530;
     
   }
 
+  #final_box div{
+    display: flex;
+    gap: 30px;
+  }
+
   #final_but{
-    visibility: collapse;
+    display: none;
     background-color: #6495ED; 
     color: white;
     border: none;
@@ -133,7 +139,32 @@ body {
     background-color: #4876FF; /* Более яркий синий при наведении */
 }
 
-  #profile_image{
-    width: 150px;
-    height: 150px;
-  }
+#profile_image{
+  width: 150px;
+  height: 150px;
+}
+
+#retry_button{
+  height: 35px;
+  background-color: #2196f3; 
+  border: none;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 7px;
+  transition: background-color 0.2s ease;
+}
+#retry_button:hover{
+  background-color: #4876FF;  
+}
+#check{
+  height: 35px;
+  background-color: #2196f3; 
+  border: none;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 7px;
+  transition: background-color 0.2s ease;
+}
+#check:hover{
+  background-color: #4876FF;
+}

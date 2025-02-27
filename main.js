@@ -75,7 +75,7 @@ function transition(question_number){
 
 transition(question_number);
 
-let user = document.getElementById("user_score")
+
 
 let victory_music = document.getElementById("victory_music");
 
@@ -90,38 +90,60 @@ started_button.addEventListener("click", function (event) {
     started_box.style.display = "none";
     question_box.style.display ="block"
 });
-question_button.addEventListener("click",function (event) {
-    let question_option = document.querySelector('input[name ="radio_button"]:checked').value;
-    console.log(question_option);
-
-    if (question_number >= 8) {
-        question_button.style.display = "none";
-        final_button.style.visibility = "visible";
-        console.log("Тест пройден");
-        
-        
-    } else {
-
-        if(question_option == object[question_number].correct){
-            console.log("Ты большой молодец дай обниму ");
-            
-            
-            user_score += 1;
-            console.log(user_score);
-            
-
-        }else{
-            console.log("Неправильно");    
-        }   
-        question_number += 1;
-        transition(question_number); 
-    }         
-});
-
-final_button.addEventListener("click",function (event) {
-    question_box.style.display = "none";
-    final_box.style.display = "flex";
-    user.textContent = user_score +1;
-
+let user = document.getElementById("user_score");
+function a() {
+    question_button.addEventListener("click",function (event) {
+        let question_option = document.querySelector('input[name ="radio_button"]:checked').value;
+        console.log(question_option);
     
+        if (question_number >= 8) {
+            question_box.style.display = "none";
+            question_button.style.display = "none";
+            final_box.style.display = "flex";
+            final_button.style.display = "block";
+            console.log("Тест пройден");
+            user.textContent = user_score +1;
+            let profile_description = document.getElementById("profile_description");
+
+            
+            
+        } else {
+    
+            if(question_option == object[question_number].correct){
+                console.log("Ты большой молодец дай обниму ");
+                
+                
+                user_score += 1;
+                console.log(user_score);
+                
+    
+            }else{
+                console.log("Неправильно");    
+            }   
+            question_number += 1;
+            transition(question_number); 
+        }         
+    });
+    
+};
+a();
+
+
+
+
+
+
+let retryButton = document.getElementById("retry_button");
+retryButton.addEventListener("click",function (event) {
+    question_number = 0;
+    user_score = 0;
+    index = 0;
+    final_box.style.display = "none";
+    started_box.style.display = "flex";
+    final_button.style.display = "none";
+    question_button.style.display = "block";
+    transition(question_number);
+    a();
+ 
 });
+
