@@ -95,7 +95,7 @@ function a() {
     question_button.addEventListener("click",function (event) {
         let question_option = document.querySelector('input[name ="radio_button"]:checked').value;
         console.log(question_option);
-    
+ 
         if (question_number >= 8) {
             question_box.style.display = "none";
             question_button.style.display = "none";
@@ -104,6 +104,7 @@ function a() {
             console.log("Тест пройден");
             user.textContent = user_score +1;
             let profile_description = document.getElementById("profile_description");
+    
 
             
             
